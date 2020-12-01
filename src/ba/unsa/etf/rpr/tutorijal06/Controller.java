@@ -14,7 +14,7 @@ public class Controller {
     public TextField txtField;
     private Double broj1, broj2;
     private String operacija = new String("");
-
+    private Button lastButtonClicked =new Button();
     private String dajRezultat(){
         Double rezultat;
         if(operacija.equals("+")) rezultat = broj1 + broj2;
@@ -26,15 +26,17 @@ public class Controller {
     }
 
     public void bttnClick(ActionEvent actionEvent) {
-        if(txtField.getText().equals("0")) txtField.setText("");
+        if(txtField.getText().equals("0") || lastButtonClicked.getId().equals("bttnEquals")) txtField.setText("");
         Button button = (Button)actionEvent.getSource();
         txtField.setText(txtField.getText() + button.getText());
+        lastButtonClicked = button;
     }
 
     public void bttnEqualsClick(ActionEvent actionEvent) {
         broj2 = Double.valueOf(txtField.getText());
         txtField.setText(dajRezultat());
         obnoviDigitron();
+        lastButtonClicked = (Button)actionEvent.getSource();
     }
     private void obnoviDigitron(){
         broj1 = Double.valueOf(txtField.getText());
@@ -45,5 +47,6 @@ public class Controller {
         broj1 = Double.valueOf(txtField.getText());
         operacija = button.getText();
         txtField.setText("0");
+        lastButtonClicked = button;
     }
 }
