@@ -27,7 +27,7 @@ public class Controller {
 
     public void bttnClick(ActionEvent actionEvent) {
         if(display.getText().equals("0")) display.setText("");
-        if(lastButtonClicked == null)
+        if(lastButtonClicked.getId() != null)
             if (lastButtonClicked.getId().equals("equalsBtn"))
                 display.setText("");
         Button button = (Button)actionEvent.getSource();
