@@ -1,6 +1,8 @@
-#bttnEquals {
+#equalsBtn {
 -fx-background-color: lightskyblue;
 }
-#txtField{
--fx-background-color: lightcoral;
+#deleteBtn {
+-fx-background-color: coral;
 }
+
+

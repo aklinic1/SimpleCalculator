@@ -1,52 +1,83 @@
 package ba.unsa.etf.rpr.tutorijal06;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-
+import javafx.scene.control.Label;
 
 public class Controller {
-    public TextField txtField;
-    private Double broj1, broj2;
-    private String operacija = new String("");
-    private Button lastButtonClicked =new Button();
-    private String dajRezultat(){
+    @FXML
+    private Label display;
+    @FXML
+    private Label backupDisplay;
+    @FXML
+    private Button plusBtn;
+
+    boolean ocistiDisplay = false;
+    private double broj1, broj2;
+    private String operacija1 = "", operacija2 = "";
+
+    private Button lastButtonClicked = new Button();
+
+    private String dajRezultat(String operacija){
         Double rezultat;
         if(operacija.equals("+")) rezultat = broj1 + broj2;
         else if(operacija.equals("-")) rezultat = broj1 - broj2;
         else if(operacija.equals("/")) rezultat = broj1 / broj2;
         else if(operacija.equals("x")) rezultat = broj1 * broj2;
         else rezultat = broj1 % broj2;
+        if(rezultat == rezultat.intValue())
+            return String.valueOf(rezultat.intValue());
         return String.valueOf(rezultat);
     }
 
-    public void bttnClick(ActionEvent actionEvent) {
-        if(txtField.getText().equals("0") || lastButtonClicked.getId().equals("bttnEquals")) txtField.setText("");
-        Button button = (Button)actionEvent.getSource();
-        txtField.setText(txtField.getText() + button.getText());
-        lastButtonClicked = button;
+    private void setBackupDisplay(String text){
+        backupDisplay.setText(text);
     }
 
-    public void bttnEqualsClick(ActionEvent actionEvent) {
-        broj2 = Double.valueOf(txtField.getText());
-        txtField.setText(dajRezultat());
-        obnoviDigitron();
-        lastButtonClicked = (Button)actionEvent.getSource();
+    private void setDisplay(String text){
+        display.setText(text);
     }
-    private void obnoviDigitron(){
-        broj1 = Double.valueOf(txtField.getText());
+    private boolean isOperationClick(Button buttonClicked){
+        if(buttonClicked.getId() != null) {
+            if (buttonClicked.getId().equals("plusBtn") || buttonClicked.getId().equals("minusBtn") ||
+                    buttonClicked.getId().equals("equalsBtn") || buttonClicked.getId().equals("divideBtn") ||
+                    buttonClicked.getId().equals("multiplyBtn"))
+                return true;
+        }
+        return false;
+    }
+    public void bttnClick(ActionEvent actionEvent) {
+       Button buttonClicked = (Button) actionEvent.getSource();
+
+       if(lastButtonClicked.getId() != null) {
+           if (isOperationClick(lastButtonClicked))
+               display.setText("");
+       }
+       if(display.getText().equals("0"))
+               setDisplay("");
+       setDisplay(display.getText() + buttonClicked.getText());
+
+        lastButtonClicked = buttonClicked;
     }
 
     public void bttnOperationClick(ActionEvent actionEvent) {
-        Button button = (Button)actionEvent.getSource();
-        broj1 = Double.valueOf(txtField.getText());
-        operacija = button.getText();
-        txtField.setText("0");
-        lastButtonClicked = button;
+        Button buttonClicked = (Button) actionEvent.getSource();
+        if(operacija1.equals("")) {
+            broj1 = Double.valueOf(display.getText());
+            operacija1 = buttonClicked.getText();
+            setBackupDisplay(backupDisplay.getText() + display.getText() + operacija1);
+        }
+        else {
+            broj2 = Double.valueOf(display.getText());
+            operacija2 = buttonClicked.getText();
+            setDisplay(dajRezultat(operacija1));
+            broj1 = Double.valueOf(display.getText());
+            setBackupDisplay(backupDisplay.getText());
+            operacija1 = operacija2;
+            operacija2 = "";
+        }
+        lastButtonClicked = buttonClicked;
     }
 }
