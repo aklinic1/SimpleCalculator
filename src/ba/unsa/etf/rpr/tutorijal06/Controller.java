@@ -64,17 +64,23 @@ public class Controller {
 
     public void bttnOperationClick(ActionEvent actionEvent) {
         Button buttonClicked = (Button) actionEvent.getSource();
-        if(operacija1.equals("")) {
+        if(buttonClicked.getText().equals("c")){
+            setDisplay("0");
+            setBackupDisplay("");
+            operacija1 = "";
+            operacija2 = "";
+        }
+        else if(operacija1.equals("") || operacija1.equals("=")) {
             broj1 = Double.valueOf(display.getText());
             operacija1 = buttonClicked.getText();
-            setBackupDisplay(backupDisplay.getText() + display.getText() + operacija1);
+            setBackupDisplay(display.getText() + operacija1);
         }
         else {
             broj2 = Double.valueOf(display.getText());
             operacija2 = buttonClicked.getText();
             setDisplay(dajRezultat(operacija1));
+            setBackupDisplay(backupDisplay.getText() + broj2 + operacija2);
             broj1 = Double.valueOf(display.getText());
-            setBackupDisplay(backupDisplay.getText());
             operacija1 = operacija2;
             operacija2 = "";
         }
