@@ -27,9 +27,13 @@ public class Controller {
         else if(operacija.equals("/")) rezultat = broj1 / broj2;
         else if(operacija.equals("x")) rezultat = broj1 * broj2;
         else rezultat = broj1 % broj2;
-        if(rezultat == rezultat.intValue())
-            return String.valueOf(rezultat.intValue());
-        return String.valueOf(rezultat);
+        return dajBrojZaIspis(rezultat);
+    }
+    private String dajBrojZaIspis(Double broj){
+        if(broj == broj.intValue())
+            return String.valueOf(broj.intValue());
+        return String.valueOf(broj);
+
     }
 
     private void setBackupDisplay(String text){
@@ -39,6 +43,7 @@ public class Controller {
     private void setDisplay(String text){
         display.setText(text);
     }
+
     private boolean isOperationClick(Button buttonClicked){
         if(buttonClicked.getId() != null) {
             if (buttonClicked.getId().equals("plusBtn") || buttonClicked.getId().equals("minusBtn") ||
@@ -48,6 +53,7 @@ public class Controller {
         }
         return false;
     }
+
     public void bttnClick(ActionEvent actionEvent) {
        Button buttonClicked = (Button) actionEvent.getSource();
 
@@ -79,7 +85,7 @@ public class Controller {
             broj2 = Double.valueOf(display.getText());
             operacija2 = buttonClicked.getText();
             setDisplay(dajRezultat(operacija1));
-            setBackupDisplay(backupDisplay.getText() + broj2 + operacija2);
+            setBackupDisplay(backupDisplay.getText() + dajBrojZaIspis(broj2) + operacija2);
             broj1 = Double.valueOf(display.getText());
             operacija1 = operacija2;
             operacija2 = "";

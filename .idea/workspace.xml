@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="dodane sve funkcionalnosti" />
+    <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="dodane funkcionalsti (backup display), ispravljeni bugovi">
+      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Controller.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606841132883</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dodane funkcionalsti (backup display), ispravljeni bugovi">
+      <created>1608303000687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608303000687</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +161,8 @@
     <MESSAGE value="tut 6 priprema" />
     <MESSAGE value="kraj tuta commit" />
     <MESSAGE value="dodane sve funkcionalnosti" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodane sve funkcionalnosti" />
+    <MESSAGE value="dodane funkcionalsti (backup display), ispravljeni bugovi" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodane funkcionalsti (backup display), ispravljeni bugovi" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
