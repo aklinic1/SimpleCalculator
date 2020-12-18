@@ -11,10 +11,7 @@ public class Controller {
     private Label display;
     @FXML
     private Label backupDisplay;
-    @FXML
-    private Button plusBtn;
 
-    boolean ocistiDisplay = false;
     private double broj1, broj2;
     private String operacija1 = "", operacija2 = "";
 
