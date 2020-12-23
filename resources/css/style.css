@@ -1,20 +1,20 @@
+#deleteBtn {
+-fx-background-color: lightcoral;
+}
+#deleteBtn:hover {
+-fx-background-color: coral;
+}
+#deleteBtn:pressed {
+-fx-background-color: chocolate;
+}
 #equalsBtn {
 -fx-background-color: lightskyblue;
 }
-#deleteBtn {
--fx-background-color: coral;
-}
-#deleteBtn:hover {
--fx-background-color: crimson;
-}
-#deleteBtn:pressed {
--fx-background-color: darkred;
-}
 #equalsBtn:hover {
--fx-background-color: cyan;
+-fx-background-color: deepskyblue;
 }
 #equalsBtn:pressed {
--fx-background-color: cornflowerblue;
+-fx-background-color: dodgerblue;
 }
 .bttn:hover{
 -fx-background-color: lightgray;

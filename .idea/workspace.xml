@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="popravljen ispis cijelih brojeva na backup display-u">
+    <list default="true" id="bd662424-5e64-492e-84a1-9be571d102f6" name="Default Changelist" comment="dodani neki efekti u css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/digitron.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/ba/unsa/etf/rpr/tutorijal06/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/fxml/digitron.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal6/fxml/digitron.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/digitron.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/digitron.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/digitron.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal06/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +34,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -163,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608303663467</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dodani neki efekti u css">
+      <created>1608732514008</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608732514008</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +187,8 @@
     <MESSAGE value="dodane sve funkcionalnosti" />
     <MESSAGE value="dodane funkcionalsti (backup display), ispravljeni bugovi" />
     <MESSAGE value="popravljen ispis cijelih brojeva na backup display-u" />
-    <option name="LAST_COMMIT_MESSAGE" value="popravljen ispis cijelih brojeva na backup display-u" />
+    <MESSAGE value="dodani neki efekti u css" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodani neki efekti u css" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
