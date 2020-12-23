@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("digitron.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/digitron.fxml"));
         primaryStage.setTitle("Digitron");
         primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         primaryStage.setMinHeight(204);

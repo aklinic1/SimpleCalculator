@@ -1,0 +1,29 @@
+#equalsBtn {
+-fx-background-color: lightskyblue;
+}
+#deleteBtn {
+-fx-background-color: coral;
+}
+#deleteBtn:hover {
+-fx-background-color: crimson;
+}
+#deleteBtn:pressed {
+-fx-background-color: darkred;
+}
+#equalsBtn:hover {
+-fx-background-color: cyan;
+}
+#equalsBtn:pressed {
+-fx-background-color: cornflowerblue;
+}
+.bttn:hover{
+-fx-background-color: lightgray;
+}
+.bttn:pressed{
+-fx-background-color: gray;
+}
+
+
+
+
+
